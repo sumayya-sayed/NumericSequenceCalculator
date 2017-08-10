@@ -1,0 +1,2 @@
+# NumericSequenceCalculator
+NumericSequenceCalculator - Test Project
