@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequenceCalculator", "NumericSequenceCalculator\NumericSequenceCalculator.csproj", "{2376725A-E73B-481D-8807-EA84B7B9AABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequenceCalculator.Tests", "NumericSequenceCalculator.Tests\NumericSequenceCalculator.Tests.csproj", "{D00C2B66-98A4-4711-9157-C88D43D4D060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericSequenceService", "NumericSequenceService\NumericSequenceService.csproj", "{F625D433-AC53-40C3-8AAC-B3B62DE8110B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2376725A-E73B-481D-8807-EA84B7B9AABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2376725A-E73B-481D-8807-EA84B7B9AABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2376725A-E73B-481D-8807-EA84B7B9AABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2376725A-E73B-481D-8807-EA84B7B9AABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00C2B66-98A4-4711-9157-C88D43D4D060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00C2B66-98A4-4711-9157-C88D43D4D060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00C2B66-98A4-4711-9157-C88D43D4D060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00C2B66-98A4-4711-9157-C88D43D4D060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F625D433-AC53-40C3-8AAC-B3B62DE8110B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F625D433-AC53-40C3-8AAC-B3B62DE8110B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F625D433-AC53-40C3-8AAC-B3B62DE8110B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F625D433-AC53-40C3-8AAC-B3B62DE8110B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

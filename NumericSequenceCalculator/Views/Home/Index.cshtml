@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http) {
+
+        $scope.seriesModel = {};
+
+        $scope.getData = function (seriesModel) {
+            $scope.message = '';
+            $http({
+                url: '/Home/GetSequence/',
+                method: "GET",
+                params: { num: $scope.seriesModel.GivenNumber }
+            })
+            .then(function (result) {
+                $scope.seriesModel = result.data;
+                console.log(result.data);
+            }, function (result) {
+                $scope.seriesModel = {};
+                $scope.message = 'Unexpected Error while loading data!!';
+                $scope.result = "color-red";
+                console.log($scope.message);
+            });
+        };
+    });
+
+</script>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="container">
+    <form name="myForm" class="form-horizontal" novalidate>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="GivenNumber">Number:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="GivenNumber" ng-model="seriesModel.GivenNumber" ng-pattern="/^[0-9]{1,7}$/" required autofocus />
+            </div>
+            <div class="col-sm-3">
+                <span ng-show="myForm.GivenNumber.$error.pattern" style="color:red;">Not a valid number!</span>
+                <span ng-show="myForm.GivenNumber.$touched && myForm.GivenNumber.$error.required" style="color:red;">This field is required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="Submit" ng-click="getData()" />
+            </div>
+        </div>
+
+
+    </form>
+    <br />
+    <hr>
+    <p class="bg-primary">All Numbers:{{seriesModel.AllNumbers}}</p>
+    <p class="bg-success">Odd Numbers:{{seriesModel.OddNumbers}}</p>
+    <p class="bg-info">Even Numbers:{{seriesModel.EvenNumbers}}</p>
+    <p class="bg-warning">Special Numbers:{{seriesModel.SpecialNumber}}</p>
+    <p class="bg-danger">Febonacci Numbers:{{seriesModel.FibonacciSeries}}</p>
+
+    <h5 style="color:red;">{{message}}</h5>
+
+</div>
